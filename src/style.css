@@ -1,0 +1,262 @@
+.pics {
+    position: absolute;
+    top: 1000px;
+  left:8%;
+}
+
+ .pics img {
+    width: 400px;
+    margin: 65px;
+}
+
+
+
+#Background1 {
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(180deg, #DD5D4C 0%, rgba(217, 217, 217, 0) 100%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))；
+  z-index: 1;
+}
+
+#Background2 {
+position: fixed;
+width: 2019px;
+height: 1610px;
+left: -539px;
+bottom: 200px;
+background: radial-gradient(50% 50% at 50% 50%, #E6A139 0%, rgba(143, 100, 100, 0) 100%);
+}
+
+
+
+
+body {
+  background-color: #2D2440;
+  position: relative;
+
+  width:  100%;
+  height: 100%;
+  margin:  0;
+  padding: 0;
+
+}
+
+html,
+body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+
+}
+
+    
+
+
+.circle-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -88px;
+  margin-left: -88px;
+  cursor: pointer;
+}
+
+.circle-container:hover .circle {
+  -webkit-transform: rotate3d(45, 45, 0, -180deg);
+     -moz-transform: rotate3d(45, 45, 0, -180deg);
+       -o-transform: rotate3d(45, 45, 0, -180deg);
+          transform: rotate3d(45, 45, 0, -180deg);
+}
+
+.circle-container:hover .outer-ring {
+  -webkit-transform: rotate3d(45, 45, 0, 180deg) scale(0.7);
+     -moz-transform: rotate3d(45, 45, 0, 180deg) scale(0.7);
+       -o-transform: rotate3d(45, 45, 0, 180deg) scale(0.7);
+          transform: rotate3d(45, 45, 0, 180deg) scale(0.7);
+}
+
+.circle-container,
+.front,
+.back {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background-color: transparent;
+}
+
+.circle,
+.outer-ring {
+  -webkit-transition: 0.5s;
+     -moz-transition: 0.5s;
+       -o-transition: 0.5s;
+          transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+       -o-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: scale(0.49);
+     -moz-transform: scale(0.49);
+       -o-transform: scale(0.49);
+          transform: scale(0.49);
+}
+
+.front {
+  background-color: #fff;
+  z-index: 2;
+}
+
+.back a {
+  font-family: cabin, sans-serif;
+  font-weight: 600;
+  font-size: 2.4em;
+  line-height: 0.9em;
+  text-decoration: none;
+  color: Orange
+
+}
+
+.back {
+  background-color: #fff;
+  -webkit-transform: rotate3d(45, 45, 0, 180deg);
+     -moz-transform: rotate3d(45, 45, 0, 180deg);
+       -o-transform: rotate3d(45, 45, 0, 180deg);
+          transform: rotate3d(45, 45, 0, 180deg);
+}
+
+.outer-ring {
+  position: absolute;
+  width: 211px;
+  height: 211px;
+  top: -30px;
+  left: -30px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  cursor: pointer;
+  -webkit-transform: rotate3d(1, 0.3, 0, 77deg);
+     -moz-transform: rotate3d(1, 0.3, 0, 77deg);
+       -o-transform: rotate3d(1, 0.3, 0, 77deg);
+          transform: rotate3d(1, 0.3, 0, 77deg);
+}
+
+.satelite {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 98px;
+  left: -6px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: rotate3d(-1, -0.3, 0, -77deg);
+     -moz-transform: rotate3d(-1, -0.3, 0, -77deg);
+       -o-transform: rotate3d(-1, -0.3, 0, -77deg);
+          transform: rotate3d(-1, -0.3, 0, -77deg);
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+     -moz-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-transform-origin: 940%;
+     -moz-transform-origin: 940%;
+       -o-transform-origin: 940%;
+          transform-origin: 940%;
+  -webkit-animation-duration: 3s;
+     -moz-animation-duration: 3s;
+       -o-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: orbit;
+     -moz-animation-name: orbit;
+       -o-animation-name: orbit;
+          animation-name: orbit;
+}
+
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) rotateX(90deg);
+            transform: rotate(0deg) rotateX(90deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg) rotateX(90deg);
+            transform: rotate(-360deg) rotateX(90deg);
+  }
+}
+
+@-moz-keyframes orbit {
+  from {
+    -moz-transform: rotate(0deg) rotateX(90deg);
+         transform: rotate(0deg) rotateX(90deg);
+  }
+  to {
+    -moz-transform: rotate(-360deg) rotateX(90deg);
+         transform: rotate(-360deg) rotateX(90deg);
+  }
+}
+
+@-o-keyframes orbit {
+  from {
+    -o-transform: rotate(0deg) rotateX(90deg);
+       transform: rotate(0deg) rotateX(90deg);
+  }
+  to {
+    -o-transform: rotate(-360deg) rotateX(90deg);
+       transform: rotate(-360deg) rotateX(90deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) rotateX(90deg);
+  }
+  to {
+    transform: rotate(-360deg) rotateX(90deg);
+  }
+}
+
+
+.arrow{
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'GT Walsheim Pro Trial Rg';
+    font-weight: 500;
+    font-style: normal;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 8px;
+    -webkit-transform: rotate(45deg);
+    font-size: 0 !important;
+    margin-top: 40%;
+    margin-left: 49%;
+
+}
+
+
