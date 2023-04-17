@@ -27,9 +27,11 @@ button {
   color: white; 
   border: 0px; 
   margin-top: 20px; 
+  cursor: pointer; 
 }
 button:hover {
   background:rgba(0, 0, 0, 0.4); 
+  cursor: pointer; 
 }
 #download {
   font-family: 'Inter'; 
